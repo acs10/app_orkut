@@ -1,4 +1,3 @@
-import 'package:app_orkut/app/modules/home/teste_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_triple/flutter_triple.dart';
@@ -102,9 +101,8 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
       body: ScopedBuilder<HomeStore, Exception, int>(
         store: store,
         onState: (_, counter) {
-          return Padding(
-            padding: const EdgeInsets.all(10),
-            child: Text('$counter'),
+          return Column(
+            children: [],
           );
         },
         onError: (context, error) => const Center(),
