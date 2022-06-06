@@ -1,6 +1,6 @@
-import 'package:app_orkut/app/modules/authentication/authentication_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
+import 'modules/authentication/authentication_module.dart';
 import 'modules/home/home_module.dart';
 
 class AppModule extends Module {

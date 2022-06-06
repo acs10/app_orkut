@@ -16,11 +16,24 @@ class AuthenticationPageState extends State<AuthenticationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Column(
-        children: <Widget>[],
+      body: Container(
+        // ignore: prefer_const_constructors
+        padding: EdgeInsets.only(
+          top: 60,
+          left: 40,
+          right: 40,
+        ),
+        color: Colors.white,
+        child: ListView(
+          children: <Widget>[
+            SizedBox(
+              width: 228,
+              height: 228,
+              child:
+                  Image.asset("lib/app/modules/authentication/assets/logo.png"),
+            )
+          ],
+        ),
       ),
     );
   }
