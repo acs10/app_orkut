@@ -18,7 +18,7 @@ class AuthenticationPageState extends State<AuthenticationPage> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(top: 60),
+          padding: const EdgeInsets.only(top: 50),
           child: Column(
             children: <Widget>[
               SizedBox(
@@ -76,19 +76,21 @@ class AuthenticationPageState extends State<AuthenticationPage> {
               const Align(
                 alignment: Alignment.centerRight,
                 child: Padding(
-                  padding: EdgeInsets.only(top: 14, right: 38),
+                  padding: EdgeInsets.only(top: 8, right: 38),
                   child: Text('Esqueceu a senha ?',
                       style: TextStyle(color: Colors.black)),
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 25,
               ),
               SizedBox(
                 height: 48,
                 width: MediaQuery.of(context).size.width / 2.2,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Modular.to.navigate('/Homepage');
+                  },
                   style: TextButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30)),
@@ -98,6 +100,40 @@ class AuthenticationPageState extends State<AuthenticationPage> {
                           color: Colors.white, fontWeight: FontWeight.bold)),
                 ),
               ),
+              const SizedBox(
+                height: 25,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 40,
+                    height: 40,
+                    child: Image.asset(
+                        "lib/app/modules/authentication/assets/google.png"),
+                  ),
+                  const SizedBox(
+                    width: 15,
+                  ),
+                  SizedBox(
+                    width: 40,
+                    height: 40,
+                    child: Image.asset(
+                        "lib/app/modules/authentication/assets/hotmail.png"),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 25,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 70),
+                child: Row(children: [
+                  Text("Ainda não tem uma conta?"),
+                  Text("Registe-se",
+                      style: TextStyle(fontWeight: FontWeight.bold))
+                ]),
+              )
             ],
           ),
         ),
