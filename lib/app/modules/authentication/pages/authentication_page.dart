@@ -18,7 +18,7 @@ class AuthenticationPageState extends State<AuthenticationPage> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(top: 50),
+          padding: const EdgeInsets.only(top: 55),
           child: Column(
             children: <Widget>[
               SizedBox(
@@ -86,7 +86,7 @@ class AuthenticationPageState extends State<AuthenticationPage> {
               ),
               SizedBox(
                 height: 48,
-                width: MediaQuery.of(context).size.width / 2.2,
+                width: MediaQuery.of(context).size.width / 2.0,
                 child: TextButton(
                   onPressed: () {
                     Modular.to.navigate('/Homepage');
@@ -130,7 +130,7 @@ class AuthenticationPageState extends State<AuthenticationPage> {
                 padding: const EdgeInsets.only(left: 70),
                 child: Row(children: [
                   Text("Ainda não tem uma conta?"),
-                  Text("Registe-se",
+                  Text(" Registe-se",
                       style: TextStyle(fontWeight: FontWeight.bold))
                 ]),
               )
