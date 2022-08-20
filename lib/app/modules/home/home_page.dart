@@ -9,10 +9,12 @@ class HomePage extends StatefulWidget {
   const HomePage({Key? key, this.title = "Home"}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  HomePageState createState() => HomePageState();
 }
 
-class _HomePageState extends ModularState<HomePage, HomeStore> {
+class HomePageState extends State<HomePage> {
+  final HomeStore store = Modular.get();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,13 +102,23 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
       ),
       body: ScopedBuilder<HomeStore, Exception, int>(
         store: store,
-        onState: (_, counter) {
-          return Column(
-            children: [],
-          );
-        },
-        onError: (context, error) => const Center(),
+        onState: (context, counter) => buildPageOnState(context, counter),
+        onError: (context, error) => buildPageOnError(context, error),
+        onLoading: (context) => buildPageOnLoading(context),
       ),
     );
   }
+
+  Widget buildPageOnState(BuildContext context, int counter){
+    return Center(child: Column(children: const [],),);
+  }
+
+  Widget buildPageOnError(BuildContext context, Exception? error){
+    return Center(child: Column(children: const [],),);
+  }
+
+  Widget buildPageOnLoading(BuildContext context){
+    return Center(child: Column(children: const [],),);
+  }
+
 }
