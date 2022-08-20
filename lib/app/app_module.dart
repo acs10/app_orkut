@@ -1,4 +1,3 @@
-import 'package:app_orkut/app/modules/home/home_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'modules/authentication/authentication_module.dart';
@@ -11,6 +10,6 @@ class AppModule extends Module {
   @override
   final List<ModularRoute> routes = [
     ModuleRoute(Modular.initialRoute, module: AuthenticationModule()),
-    ModuleRoute('/Homepage', module: HomeModule()),
+    ModuleRoute('/Homepage/', module: HomeModule()),
   ];
 }
